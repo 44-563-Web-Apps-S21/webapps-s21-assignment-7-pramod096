@@ -63,7 +63,7 @@
                 "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
 
     var clickCount = 0;
-    var treasureLocation = 18;
+    var treasureLocation = Math.floor(Math.random() * Math.floor(25))
     
     function makeGuess(position){
 
@@ -86,6 +86,12 @@
         var treasureDistance = distance(id, treasureLocation);
 
         document.getElementById("distance").innerHTML = "Distance is " +treasureDistance;
+    }
+
+    function newGame(){
+        document.getElementById("clicks").innerHTML = "Number of clicks is zero"
+        treasureLocation = Math.floor(Math.random() * Math.floor(25))
+
     }
     
 
